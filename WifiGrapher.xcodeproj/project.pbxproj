@@ -6,14 +6,55 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		419660E92F5F305E007E59DE /* OCMock in Frameworks */ = {isa = PBXBuildFile; productRef = 419660E82F5F305E007E59DE /* OCMock */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		419660E22F5F3040007E59DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 412F31752F5EE380002B150F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 412F317C2F5EE380002B150F;
+			remoteInfo = WifiGrapher;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		412F317D2F5EE380002B150F /* WifiGrapher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WifiGrapher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		419660DE2F5F3040007E59DE /* WifiGrapherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WifiGrapherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		412F31932F5EEF34002B150F /* Exceptions for "WifiGrapher" folder in "WifiGrapher" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				WifiDataScannerTests.m,
+			);
+			target = 412F317C2F5EE380002B150F /* WifiGrapher */;
+		};
+		419660EB2F5F3144007E59DE /* Exceptions for "WifiGrapher" folder in "WifiGrapherTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				WifiDataScannerTests.m,
+			);
+			target = 419660DD2F5F3040007E59DE /* WifiGrapherTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		412F317F2F5EE380002B150F /* WifiGrapher */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				412F31932F5EEF34002B150F /* Exceptions for "WifiGrapher" folder in "WifiGrapher" target */,
+				419660EB2F5F3144007E59DE /* Exceptions for "WifiGrapher" folder in "WifiGrapherTests" target */,
+			);
 			path = WifiGrapher;
+			sourceTree = "<group>";
+		};
+		419660DF2F5F3040007E59DE /* WifiGrapherTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WifiGrapherTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +67,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		419660DB2F5F3040007E59DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419660E92F5F305E007E59DE /* OCMock in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				412F317F2F5EE380002B150F /* WifiGrapher */,
+				419660DF2F5F3040007E59DE /* WifiGrapherTests */,
+				419660E72F5F305E007E59DE /* Frameworks */,
 				412F317E2F5EE380002B150F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +92,16 @@
 			isa = PBXGroup;
 			children = (
 				412F317D2F5EE380002B150F /* WifiGrapher.app */,
+				419660DE2F5F3040007E59DE /* WifiGrapherTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		419660E72F5F305E007E59DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +129,30 @@
 			productReference = 412F317D2F5EE380002B150F /* WifiGrapher.app */;
 			productType = "com.apple.product-type.application";
 		};
+		419660DD2F5F3040007E59DE /* WifiGrapherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419660E42F5F3040007E59DE /* Build configuration list for PBXNativeTarget "WifiGrapherTests" */;
+			buildPhases = (
+				419660DA2F5F3040007E59DE /* Sources */,
+				419660DB2F5F3040007E59DE /* Frameworks */,
+				419660DC2F5F3040007E59DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				419660E32F5F3040007E59DE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				419660DF2F5F3040007E59DE /* WifiGrapherTests */,
+			);
+			name = WifiGrapherTests;
+			packageProductDependencies = (
+				419660E82F5F305E007E59DE /* OCMock */,
+			);
+			productName = WifiGrapherTests;
+			productReference = 419660DE2F5F3040007E59DE /* WifiGrapherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +165,11 @@
 				TargetAttributes = {
 					412F317C2F5EE380002B150F = {
 						CreatedOnToolsVersion = 26.3;
+						LastSwiftMigration = 2630;
+					};
+					419660DD2F5F3040007E59DE = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 412F317C2F5EE380002B150F;
 					};
 				};
 			};
@@ -94,18 +182,29 @@
 			);
 			mainGroup = 412F31742F5EE380002B150F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				419660D92F5F2CB9007E59DE /* XCRemoteSwiftPackageReference "ocmock" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 412F317E2F5EE380002B150F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				412F317C2F5EE380002B150F /* WifiGrapher */,
+				419660DD2F5F3040007E59DE /* WifiGrapherTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		412F317B2F5EE380002B150F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		419660DC2F5F3040007E59DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +221,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		419660DA2F5F3040007E59DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		419660E32F5F3040007E59DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 412F317C2F5EE380002B150F /* WifiGrapher */;
+			targetProxy = 419660E22F5F3040007E59DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		412F31862F5EE380002B150F /* Debug */ = {
@@ -250,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -272,6 +387,8 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WifiGrapher/WifiGrapher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -282,6 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -304,8 +422,43 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WifiGrapher/WifiGrapher-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		419660E52F5F3040007E59DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 83M6XE3N4T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = multiply.sign.WifiGrapherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WifiGrapher.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WifiGrapher";
+			};
+			name = Debug;
+		};
+		419660E62F5F3040007E59DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 83M6XE3N4T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = multiply.sign.WifiGrapherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WifiGrapher.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WifiGrapher";
 			};
 			name = Release;
 		};
@@ -330,7 +483,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		419660E42F5F3040007E59DE /* Build configuration list for PBXNativeTarget "WifiGrapherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419660E52F5F3040007E59DE /* Debug */,
+				419660E62F5F3040007E59DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		419660D92F5F2CB9007E59DE /* XCRemoteSwiftPackageReference "ocmock" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/erikdoe/ocmock";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		419660E82F5F305E007E59DE /* OCMock */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 419660D92F5F2CB9007E59DE /* XCRemoteSwiftPackageReference "ocmock" */;
+			productName = OCMock;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 412F31752F5EE380002B150F /* Project object */;
 }
